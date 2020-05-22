@@ -1,7 +1,7 @@
 #!/bin/bash
 /home/alena/kaldi/src/online2bin/online2-tcp-nnet3-decode-faster \
-  --mfcc-config=/data8t/models/streaming/exp/chain_rvb/tdnn1n_rvb_online/conf/mfcc.conf \
-  --ivector-extraction-config=/data8t/models/streaming/exp/chain_rvb/tdnn1n_rvb_online/conf/ivector_extractor.conf \
+  --mfcc-config=/home/alena/data/models/streaming/exp/chain_rvb/tdnn1n_rvb_online/conf/mfcc.conf \
+  --ivector-extraction-config=/home/alena/data/models/streaming/exp/chain_rvb/tdnn1n_rvb_online/conf/ivector_extractor.conf \
   --frames-per-chunk=20 \
   --extra-left-context-initial=0 \
   --min-active=200 \
@@ -13,6 +13,6 @@
   --chunk-length=0.2 \
   --port-num=5050 \
   --samp-freq=16000 \
-  /data8t/models/streaming/exp/chain_rvb/tdnn1n_rvb_online/final.mdl \
-  /data8t/models/streaming/exp/chain_rvb/tree_a/graph_tgsmall/HCLG.fst \
-  /data8t/models/streaming/exp/chain_rvb/tree_a/graph_tgsmall/words.txt 
+  /home/alena/data/models/streaming/exp/chain_rvb/tdnn1n_rvb_online/final.mdl \
+  /home/alena/data/models/streaming/exp/chain_rvb/tree_a/graph_tgsmall/HCLG.fst \
+  /home/alena/data/models/streaming/exp/chain_rvb/tree_a/graph_tgsmall/words.txt 
