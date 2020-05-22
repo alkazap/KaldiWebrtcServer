@@ -70,3 +70,24 @@ tree
 
 9 directories, 11 files
 ```
+* Fix ivector_extractor.fixed.conf
+```
+cd /home/alena/data/models/streaming/exp/chain_rvb/tdnn1n_rvb_online/conf && \
+cat ivector_extractor.fixed.conf | perl -npe "s/=.*data8t\//=\/home\/alena\/data\//" > ivector_extractor.conf && \
+rm ivector_extractor.fixed.conf && \
+cat ivector_extractor.conf
+```
+* Output
+```
+--splice-config=/home/alena/data/models/streaming/exp/chain_rvb/tdnn1n_rvb_online/conf/splice.conf
+--cmvn-config=/home/alena/data/models/streaming/exp/chain_rvb/tdnn1n_rvb_online/conf/online_cmvn.conf
+--lda-matrix=/home/alena/data/models/streaming/exp/chain_rvb/tdnn1n_rvb_online/ivector_extractor/final.mat
+--global-cmvn-stats=/home/alena/data/models/streaming/exp/chain_rvb/tdnn1n_rvb_online/ivector_extractor/global_cmvn.stats
+--diag-ubm=/home/alena/data/models/streaming/exp/chain_rvb/tdnn1n_rvb_online/ivector_extractor/final.dubm
+--ivector-extractor=/home/alena/data/models/streaming/exp/chain_rvb/tdnn1n_rvb_online/ivector_extractor/final.ie
+--num-gselect=5
+--min-post=0.025
+--posterior-scale=0.1
+--max-remembered-frames=1000
+--max-count=100
+```
