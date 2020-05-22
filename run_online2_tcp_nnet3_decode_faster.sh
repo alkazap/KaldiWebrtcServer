@@ -1,7 +1,7 @@
 #!/bin/bash
 /home/alena/kaldi/src/online2bin/online2-tcp-nnet3-decode-faster \
   --mfcc-config=/data8t/models/streaming/exp/chain_rvb/tdnn1n_rvb_online/conf/mfcc.conf \
-  --ivector-extraction-config=/data8t/models/streaming/exp/chain_rvb/tdnn1n_rvb_online/conf/ivector_extractor.fixed.conf \
+  --ivector-extraction-config=/data8t/models/streaming/exp/chain_rvb/tdnn1n_rvb_online/conf/ivector_extractor.conf \
   --frames-per-chunk=20 \
   --extra-left-context-initial=0 \
   --min-active=200 \
