@@ -1,0 +1,4 @@
+# For Ubuntu18.04 (with default Python3.6)
+apt-get update && apt-get install -y python3.7
+python3.7 -m pip install -U pip
+python3.7 -m pip install aiortc aiohttp numpy

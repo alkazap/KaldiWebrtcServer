@@ -1,3 +1,4 @@
+#!/usr/bin/python3.7
 import json
 import logging
 from asyncio import create_task, Lock, open_connection, wait_for, sleep
@@ -45,9 +46,10 @@ class KaldiSink:
             await self.__ks.free()
             return
         log.info(f'Connected to Kaldi server {self.__ks.host}:{self.__ks.port}...')
+        #self.__audio_task = create_task(self.__run_audio_xfer())
+        #self.__text_task = create_task(self.__run_text_xfer())
         self.__audio_task = create_task(self.__run_audio_xfer())
         self.__text_task = create_task(self.__run_text_xfer())
-
     async def stop(self):
         if self.__audio_task is not None:
             self.__audio_task.cancel()
