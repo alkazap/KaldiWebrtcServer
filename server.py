@@ -76,7 +76,7 @@ async def offer(request):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--servers', help='Server configuration JSON')
+    parser.add_argument('--servers', type=str, default='servers.json', help='Server configuration JSON')
     parser.add_argument('--cert-file', help='SSL certificate file (for HTTPS)')
     parser.add_argument('--key-file', help='SSL key file (for HTTPS)')
     parser.add_argument('--port', type=int, default=8080,
